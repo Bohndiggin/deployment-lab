@@ -1,11 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv')
+require('dotenv').config()
 const path = require('path');
 
 const app = express()
-app.use(cors)
+
 app.use(express.json())
+app.use(cors)
 
 const { deliverHome, deliverJS, deliverCSS } = require('./controller')
 
